@@ -1,41 +1,4 @@
-.App {
-  text-align: center;
-}
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
 
 @import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap');
 body {
@@ -46,6 +9,8 @@ body {
 	height: 100vh;
     font-family: 'Black Ops One', system-ui;
     user-select: none;
+    overflow-x: none;
+    max-width: 100%;
 }
 
 @keyframes gradient {
@@ -67,8 +32,9 @@ body {
     white-space: nowrap;
     overflow: hidden;
     animation: bounce 5s linear infinite;
-    text-wrap: wrap;
     text-align: center;
+    text-wrap: wrap;
+    width: 100%;
 }
 .contenedor a:hover{
     text-decoration: none;
@@ -117,9 +83,14 @@ body {
 }
 @media screen  and (max-width:500px){
     .contenedor img{
-        width: 300px;
-        height: 300px;
+        width: 200px;
+        height: 200px;
     }
+    .contenedor a{
+      font-size: 2em;
+      width: 200px;
+    }
+    
 }
 /* Google Font CDN Link */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
@@ -307,7 +278,7 @@ footer a:hover {
 
 
 #app {
-  overflow: hidden;
+  overflow: none;
   touch-action: pan-up;
   color: #ffffff;
 
@@ -320,7 +291,7 @@ footer a:hover {
 }
 
 #app h1 {
-  --fontSize: 2.5em;
+  --fontSize: 2em;
   --lineHeight: 80px;
   width: auto;
   height: calc(2 * var(--lineHeight));
@@ -339,7 +310,7 @@ footer a:hover {
 
 #app canvas {
   display: block;
-  position: fixed;
+
   z-index: -1;
   top: 0;
 }
